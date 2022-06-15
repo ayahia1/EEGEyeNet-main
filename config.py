@@ -23,6 +23,9 @@ config['save_models'] = True
 # If retrain is false we need to provide where to load the experiment files
 config['load_experiment_dir'] = ''
 
+config['PA_train_ratio'] = 0
+config['PA_test_ratio'] = 0.8
+
 def build_file_name():
     all_EEG_file = config['task'] + '_with_' + config['dataset']
     all_EEG_file = all_EEG_file + '_' + 'synchronised_' + config['preprocessing']
