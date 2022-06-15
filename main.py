@@ -31,12 +31,12 @@ def main():
 
 
     #Load the data
-    with np.load('data\LR_task_with_antisaccade_synchronised_min_hilbert.npz') as f:
+    with np.load('./data/LR_task_with_antisaccade_synchronised_min_hilbert.npz') as f:
         trainX_PA = f[config['trainX_variable']]
         trainY_PA = f[config['trainY_variable']]
 
 
-    with np.load('data\LR_task_with_dots_synchronised_min_hilbert.npz') as f:
+    with np.load('./data/LR_task_with_dots_synchronised_min_hilbert.npz') as f:
         trainX_LG = f[config['trainX_variable']]
         trainY_LG = f[config['trainY_variable']]
 
