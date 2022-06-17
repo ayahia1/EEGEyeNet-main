@@ -7,7 +7,7 @@ config['task'] = 'LR_task'
 config['dataset'] = 'antisaccade'
 config['preprocessing'] = 'min'  
 config['feature_extraction'] = True 
-config['include_ML_models'] = False   
+config['include_ML_models'] = True   
 config['include_your_models'] = True 
 config['include_dummy_models'] = False 
 
@@ -23,8 +23,10 @@ config['save_models'] = True
 # If retrain is false we need to provide where to load the experiment files
 config['load_experiment_dir'] = ''
 
+#Change 'PA_train_ratio' and 'PA_test_ratio' to determine the ratio (out of 1) of the training and testing set to be PA data. For example 0.2 means 20% of the data is PA and 80% is LG
+
 config['PA_train_ratio'] = 0
-config['PA_test_ratio'] = 0.8
+config['PA_test_ratio'] = 0
 
 def build_file_name():
     all_EEG_file = config['task'] + '_with_' + config['dataset']
